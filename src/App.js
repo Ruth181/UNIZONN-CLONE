@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { SIgnUpForm } from './components/forms/signup-form';
+import { AuthenticationBar } from './components/top-bars/authentication-topbar';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import SignUpModule from './components/modules/sign-in';
+import LogInModule from './components/modules/log-in';
+import { PersonalInfoForm } from './components/forms/personalnfo-form';
+import PersonalInfoModule from './components/modules/personalInfo';
+import OtpModule from './components/modules/otp-module';
+import UploadProfilePicturePage from './components/modules/upload-pic-module';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <AuthenticationBar/> */}
+        <Routes>
+          <Route exact path='/' element={<LogInModule/>}></Route>
+          <Route path='/signUp' element={<SignUpModule/>}></Route>
+          <Route path='/personal-info' element={<PersonalInfoModule/>}></Route>
+          <Route path='/enter-otp' element={<OtpModule/>}></Route>
+          <Route path='/upload-image' element={<UploadProfilePicturePage/>}></Route>
+        </Routes>
     </div>
   );
 }

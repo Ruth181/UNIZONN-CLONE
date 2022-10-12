@@ -12,7 +12,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.google-login-btn{
+  width : 80%;
+  border-radius: 20%;
+  color: black;
+  font-weight: 800;
 
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +42,29 @@
     transform: rotate(360deg);
   }
 }
+.input{
+    display: block;
+    margin: auto;
+    border: none;
+    padding: 0;
+    width: 7.5ch;
+    background:repeating-linear-gradient(90deg, #828282,0, #828282 1ch, transparent 0,transparent 1.5ch) 0 100%/ 7ch 1px no-repeat;
+    font: 4ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.5ch;
+  }
+
+  .input:focus{
+    outline: none;
+    color: #828282;
+  }
+
+  /* .input{
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #F5F5FC;
+    justify-self: center;
+  }
+
+  .input:focus{
+    outline: #05C731;
+  } */
