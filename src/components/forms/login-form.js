@@ -26,7 +26,7 @@ export const LoginForm = () => {
 
     return(
 
-        <div className="w-11/12 my-8 md:w-4/5 lg:w-1/3 xl:w-1/4 p-8 h-auto bg-white rounded-2xl shadow-sm">
+        <div className="w-11/12 my-8 md:w-4/5 lg:w-1/3 xl:w-1/4 p-8 h-auto bg-white rounded-2xl lg:shadow-sm">
             <div className="text-center">
                 <p className="capitalize text-[#05C731] font-semibold text-2xl">Welcome!</p>
                 <p className="text-[#67676D] py-2 text-sm font-md">Join millions of students connecting on <br/> unizonn</p>
@@ -118,7 +118,7 @@ export const LoginForm = () => {
                         <p className='text-center font-semibold'>Login with Google</p>
                     </div>
                     <div className='text-xs pt-6 text-center'><span>Don't have an account? </span>
-                        <Link to={{pathname : '/signUp'}} className="text-[#05C731] font-semibold">SignUp</Link>
+                        <Link to={{pathname : '/sign-up'}} className="text-[#05C731] font-semibold">SignUp</Link>
                     </div>
                 </div>
             </div>

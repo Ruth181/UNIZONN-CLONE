@@ -2,7 +2,7 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import { IconButton } from '@mui/material';
 import React from 'react';
 
-export const PersonalInfoForm = () => {
+export const PartialPersonalInfoForm = () => {
     const [select, setSelect] = React.useState({
         countryDropdown : false,
         roleDropdown : false,
@@ -31,7 +31,7 @@ export const PersonalInfoForm = () => {
         <div className="my-8 
         w-11/12 md:w-4/5 lg:w-3/5
         xl:w-1/2 
-        p-8 h-auto bg-white 
+        p-8 h-fit bg-white 
         rounded-2xl lg:shadow-sm">
 
             <div className="my-4">
@@ -42,43 +42,13 @@ export const PersonalInfoForm = () => {
                 <form>
                     {/* Group 1 */}
                     <div className="flex flex-col md:flex-row gap-4 items-center mb-2">
-                        <div className="w-full md:w-1/2">
-                            <p className="text-[#6E7191] font-semibold text-xs">First Name</p>
-                            <div className="w-full rounded-lg bg-[#F5F5FC] my-2">
-                                <input type="text" className="w-full h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
-                            </div>
-                        </div>
-
-                        <div className="w-full md:w-1/2">
-                            <p className="text-[#6E7191] font-semibold text-xs">Last Name</p>
-                            <div className="w-full rounded-lg bg-[#F5F5FC] my-2">
-                                <input type="text" className="w-full h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Group 2 */}
-                    <div className="flex flex-col md:flex-row gap-4 items-center mb-2">
-                        <div className="w-full md:w-1/2">
-                            <p className="text-[#6E7191] font-semibold text-xs">Country</p>
-                            <div className="w-full rounded-lg bg-[#F5F5FC] my-2 flex-between items-center gap-2">
-                                <input 
-                                type="text" 
-                                className="w-10/12 h-full py-3 px-4 
-                                rounded-lg bg-[#F5F5FC] focus:outline-none" 
-                                required/>
-
-                                <IconButton onClick={toggleCountryDropdown}>
-                                    <KeyboardArrowDownRoundedIcon sx={{color : '#101011'}}/>
-                                </IconButton>
-                            </div>
-                        </div>
 
                         <div className="w-full md:w-1/2">
                             <p className="text-[#6E7191] font-semibold text-xs">Role</p>
                             <div className="w-full rounded-lg bg-[#F5F5FC] my-2 flex-between items-center gap-2">
                                 <input 
                                 type="text" 
-                                className="w-10/12 h-full py-3 px-4 
+                                className="w-10/12 h-full py-3.5 px-4 
                                 rounded-lg bg-[#F5F5FC] focus:outline-none" 
                                 readOnly/>
 
@@ -87,22 +57,24 @@ export const PersonalInfoForm = () => {
                                 </IconButton>
                             </div>
                         </div>
-                    </div>
-                    {/* Group 3 */}
-                    <div className="flex flex-col md:flex-row gap-4 items-center mb-2">
+
                         <div className="w-full md:w-1/2">
                             <p className="text-[#6E7191] font-semibold text-xs">Institution</p>
                             <div className="w-full rounded-lg bg-[#F5F5FC] my-2">
-                                <input type="text" className="w-full h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
+                                <input type="text" className="w-full h-full py-3.5 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
                             </div>
                         </div>
+                        
+                    </div>
+                    {/* Group 3 */}
+                    <div className="flex flex-col md:flex-row gap-4 items-center mb-2">
 
                         <div className="w-full md:w-1/2">
                             <p className="text-[#6E7191] font-semibold text-xs">Level</p>
                             <div className="w-full rounded-lg bg-[#F5F5FC] my-2 flex-between items-center gap-2">
                                 <input 
                                 type="text" 
-                                className="w-10/12 h-full py-3 px-4 
+                                className="w-10/12 h-full py-3.5 px-4 
                                 rounded-lg bg-[#F5F5FC] focus:outline-none" 
                                 readOnly/>
 
@@ -112,15 +84,12 @@ export const PersonalInfoForm = () => {
                             </div>
                         </div>
 
-                    </div>
-                    {/* Group 4 */}
-                    <div>
                         <div className="w-full md:w-1/2">
                             <p className="text-[#6E7191] font-semibold text-xs">Select Department</p>
                             <div className="w-full rounded-lg bg-[#F5F5FC] my-2 flex-between items-center gap-2">
                                 <input 
                                 type="text" 
-                                className="w-10/12 h-full py-3 px-4 
+                                className="w-10/12 h-full py-3.5 px-4 
                                 rounded-lg bg-[#F5F5FC] focus:outline-none" 
                                 readOnly/>
 
@@ -129,6 +98,7 @@ export const PersonalInfoForm = () => {
                                 </IconButton>
                             </div>
                         </div>
+
                     </div>
 
                     <div className='w-full md:w-1/2'>

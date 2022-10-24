@@ -4,7 +4,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 /**TOP BAR OR NAV BAR FOR AUTHENTICATION */
 
-export const AuthenticationBar = () => {
+export const UnizonnTopBarComponent = () => {
 
     const navigate = useNavigate();
 
@@ -25,28 +25,6 @@ export const AuthenticationBar = () => {
                     {/* Unizonn */}
                     <div className='font-semibold text-sm'>
                         <span>Unizonn</span>
-                    </div>
-                </div>
-                <div className='hidden lg:flex w-fit h-auto'>
-                    <div className='flex flex-row items-center gap-8 text-sm capitalize'>
-                        <Link to="/articles/:topic" className='hover:underline'>
-                            <span className='font-semibold'>articles</span>
-                        </Link>
-
-                        <Link to="/sign-in" className='hover:underline'>
-                            <span className='font-semibold'>sign in</span>
-                        </Link>
-
-                        <Link to="/sign-up">
-                            <button className='shadow-lg
-                            text-center text-white font-medium 
-                            px-4 py-2.5
-                            rounded-lg
-                            bg-gradient-to-r from-[#06E037] to-[#04AD2B] 
-                            hover:shadow-2xl transition-shadow duration-300 delay-200 border-none'>
-                            sign up</button>
-                        </Link>
-
                     </div>
                 </div>
                 <div className='w-fit h-auto flex lg:hidden'>

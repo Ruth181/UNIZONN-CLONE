@@ -42,6 +42,19 @@
     transform: rotate(360deg);
   }
 }
+input[type="text"]{
+  outline: none !important;
+}
+input[type="email"]{
+  outline: none !important;
+}
+
+input[type="password"]{
+  outline: none !important;
+}
+input[type="search"]{
+  outline: none !important;
+}
 .input{
     display: block;
     margin: auto;
@@ -58,6 +71,23 @@
     color: #828282;
   }
 
+  .container {
+    display: grid;
+    width: 100%;
+  }
+  
+  .content, .overlay {
+    grid-area: 1 / 1;
+  }
+
+  .backdrop{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 31.1011px -31.1011px 31.1011px rgba(165, 165, 165, 0.1), inset -31.1011px 31.1011px 31.1011px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(31.1011px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 24px;
+  }
   /* .input{
     padding: 2px;
     border-radius: 10px;
@@ -68,3 +98,19 @@
   .input:focus{
     outline: #05C731;
   } */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    max-height: 8px;
+  }
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+    ::-webkit-scrollbar-thumb {
+    background: #afb4b4; 
+      border-radius:10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    
+    background: #afb4b4; 
+  } 

@@ -4,7 +4,7 @@ import '../../App.css';
 import { useNavigate } from 'react-router-dom';
 
 let currentOTPIndex = 0;
-export const EnterOTPForm = () => {
+export const EmailVerificationOtpForm = () => {
 
     const [otp, setOTP] = React.useState(new Array(5).fill(""));
     const [open,setOpen] = React.useState(false);
@@ -23,7 +23,7 @@ export const EnterOTPForm = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        navigate('/upload-image');
+        navigate('/forgot-password-reset');
     }
     const handleOtpInputChange = ({target}) => {
         const { value } = target;
@@ -48,7 +48,7 @@ export const EnterOTPForm = () => {
     },[activeOtpIndex]);
 
     return(
-        <div className="w-11/12 md:w-fit h-auto p-12 h-fit bg-white rounded-2xl lg:shadow-sm my-16">
+        <div className="w-11/12 md:w-fit h-auto p-12 h-fit bg-white rounded-2xl lg:shadow-sm my-8">
             <div className="text-center">
                 <p className="capitalize text-[#05C731] font-semibold text-2xl pt-2">Email Verification</p>
                 <br/>
@@ -80,7 +80,7 @@ export const EnterOTPForm = () => {
                         <input type={'text'} maxLength={5} className="input" onChange={onChangeInput} ref={otpRef}/>
                     </section> */}
 
-                    <p className='text-center text-xs py-8'>Didn't receive any code? <Link to="/enter-otp" className='text-[#05C731] font-semibold'>Resend Code</Link></p>
+                    <p className='text-center text-xs py-8'>Didn't receive any code? <Link to="/forgot-password-email-verification" className='text-[#05C731] font-semibold'>Resend Code</Link></p>
 
                     <input type="submit" className='
                     w-full 
