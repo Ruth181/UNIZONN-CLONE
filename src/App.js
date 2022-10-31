@@ -18,6 +18,12 @@ import ForgotPasswordModule from './components/modules/forgot-password-module/fo
 import EmailVerificationModule from './components/modules/forgot-password-module/email-verification';
 import ResetFormerPasswordModule from './components/modules/forgot-password-module/reset-password';
 import SuccessfulModule from './components/modules/forgot-password-module/successful';
+import ArticlesModuleComponent from './components/modules/article-module/articles';
+import { ProfileDisplay } from './components/article-components/profile-component';
+import { EmbeddedArticleComponent } from './components/shared/articles-component';
+import { ConnectFriends } from './components/article-components/connect-friends-component';
+import { ReadMoreProfileReactionsComponent } from './components/article-components/article-read-more/profile-reactions';
+import { ReadMoreArticle } from './components/article-components/article-read-more/article-read-more';
 
 
 function App() {
@@ -39,7 +45,14 @@ function App() {
           <Route path="/forgot-password-email-verification" element={<EmailVerificationModule/>}></Route>
           <Route path="/forgot-password-reset" element={<ResetFormerPasswordModule/>}></Route>
           <Route path="/successful" element={<SuccessfulModule/>}></Route>
-          <Route path='/articles/:topic' element={<ArticlesModule articles={[0,1,2,3,4,5,6]}/>}></Route>
+          <Route path='/articles/:topic' element={<ArticlesModule/>}></Route>
+          <Route exact path="/logged/articles" element={<ArticlesModuleComponent 
+          leftComponent={<ProfileDisplay/>}
+          middleComponent={ <EmbeddedArticleComponent articles={[0,1,3,4]} layoutWidth={true}/>}
+          rightComponent={<ConnectFriends/>}/>}></Route>
+          <Route path="/logged/articles/:article" element={<ArticlesModuleComponent 
+          leftComponent={<ReadMoreProfileReactionsComponent/>}
+          middleComponent={<ReadMoreArticle/>}/>}></Route>
         </Routes>
     </div>
   );

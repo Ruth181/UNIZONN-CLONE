@@ -8,8 +8,9 @@ import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import { EmbeddedArticleComponent } from "../shared/articles-component";
 
-const ArticlesModule = ({articles}) => {
+const ArticlesModule = () => {
 
     const [topics, setTopics] = React.useState(['All','Arts&science', 'Technology', 'Entertainment', 'Politics']);
     const [searchParams] =useSearchParams();
@@ -27,9 +28,9 @@ const ArticlesModule = ({articles}) => {
             <div className="w-full flex min-h-screen justify-center bg-[#E5E5E5]">
                 <div className="w-11/12 flex flex-col lg:flex-row lg:gap-52 max-lg:gap-76 xl:gap-96">
                     <Connect/>
-
+                    <EmbeddedArticleComponent articles={[0,1,2,3,4,5,6]}/>
                     {/* Articles */}
-                    <div className="w-full lg:w-1/2 xl:w-2/5 my-8">
+                    {/* <div className="w-full lg:w-1/2 xl:w-2/5 my-8">
                        <div className="w-full flex justify-center bg-white rounded-xl h-fit">
                             <div className="w-11/12 flex flex-col pt-4">
                                 <div className="w-full flex justify-between">
@@ -41,7 +42,7 @@ const ArticlesModule = ({articles}) => {
                                         </IconButton>
                                     </div>
                                 </div>
-                                {/* articles Topics */}
+                                {/* articles Topics 
                                 <div className="max-w-full overflow-x-auto flex flex-nowrap gap-4 mt-4 px-5">
                                     {topics && topics.map((topic,index) => 
                                         
@@ -58,7 +59,6 @@ const ArticlesModule = ({articles}) => {
                                 </div>
                             </div>
                        </div>
-                            {/* Articles */}
                         {articles && articles.map((_, index) => 
                         <div className="w-full bg-white my-4 rounded-xl h-fit p-6" key={index}>
                             <div className="flex flex-row gap-2 items-center">
@@ -89,7 +89,7 @@ const ArticlesModule = ({articles}) => {
                             </div>
                         </div>
                         )}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </React.Fragment>
