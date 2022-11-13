@@ -8,7 +8,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
-export const ReadMoreArticle = () => {
+export const ReadMoreDraft = () => {
     return(
         <React.Fragment>
             <div className="w-full rounded-2xl h-auto bg-white py-6 px-4 md:px-12">
@@ -55,17 +55,8 @@ export const ReadMoreArticle = () => {
                         Distance Learning - A Paradigm Shift
                     </p>
                     </div>
-                    <div className="w-full flex-wrap flex justify-between items-center text-xs py-2 mt-1">
-                        <p className="cursor-pointer"><BookmarksOutlinedIcon sx={{fontSize : '18px'}}/> <span>12&nbsp;Reads</span></p>
-                        <p className="cursor-pointer"><ShareIcon sx={{fontSize : '18px'}}/> <span>100&nbsp;Shares</span></p>
-                        <p className="cursor-pointer"><FavoriteBorderIcon sx={{fontSize : '18px'}}/><span>45&nbsp;Likes</span></p>
-                        <p className="cursor-pointer"><BookmarkBorderIcon sx={{fontSize : '18px'}}/> <span>50&nbsp;Bookmarks</span></p>
-                    </div>
                 </div>
             </div>
-            <p className="text-2xl font-bold py-4">Related Articles</p>
-
-            <ListOfArticles articles={[0,1,2]}/>
         </React.Fragment>
     );
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import AuthLayoutComponent from "../layouts/auth-layout";
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
+
 
 export const SelectInterests = () => {
     const [interests, setInterests] = React.useState(["Entertainment","Scholarship","Religion","Technology Innovation","Debates","Business","Culture","Music","Politics","Business","Social Life","Government"]);
     const [selectedInterests, setSelectedInterests] = React.useState([]);
+    const navigate = useNavigate();
     //prev.filter(interest => interest !== data)
         console.log('interest', selectedInterests);
     return (
@@ -38,6 +41,10 @@ export const SelectInterests = () => {
                         </div>
 
                         <input type="submit" 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/logged/articles');
+                        }}
                         className={selectedInterests.length >= 5 ?
                             'capitalize my-4 w-full text-center bg-gradient-to-r from-[#06E037] to-[#04AD2B] text-xs text-white cursor-pointer p-3.5 my-6 rounded-lg hover:shadow-lg transition-shadow duration-300 delay-200'
                             :'capitalize my-4 w-full text-center bg-[#EFF0F6] text-xs text-gray-500 p-3.5 my-6 rounded-lg'

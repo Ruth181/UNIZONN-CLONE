@@ -74,12 +74,12 @@ const ArticlesModuleComponent = ({leftComponent, middleComponent, rightComponent
         <ArticleLayout>
             <div className="w-11/12 min-h-screen flex flex-col lg:flex-row gap-8 my-8 z-0">
                 {/* profile and navigation */}
-                <div className="basis-full lg:basis-1/4 xl:basis-1/5 h-auto">
+                <div className="basis-full lg:basis-1/4 xl:basis-1/5 h-auto ">
                     {leftComponent}
                 </div>
 
                 {/* articles section */}
-                <div className="basis-full lg:basis-1/2 xl:basis-3/5 rounded-2xl h-auto">
+                <div className="basis-full lg:basis-1/2 xl:basis-[53%] rounded-2xl h-auto">
                    {middleComponent}
                 </div>
 

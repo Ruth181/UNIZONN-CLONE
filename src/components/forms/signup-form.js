@@ -44,13 +44,18 @@ export const SignUpForm = () => {
                     <div className="flex flex-col my-2">
                         <p className="text-[#6E7191] font-semibold text-xs">Email Address</p>
                         <div className="w-full rounded-lg bg-[#F5F5FC] my-2">
-                            <input type="email" className="w-full h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
+                            <input type="email" 
+                            required
+                            className="w-full h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none"/>
                         </div>
                     </div>
                     <div className="flex flex-col my-2">
                         <p className="text-[#6E7191] font-semibold text-xs">Password</p>
                         <div className="w-full rounded-lg bg-[#F5F5FC] my-2 flex-between items-center gap-2">
-                            <input type={visibility ? "text" : "password"} className="w-10/12 h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none" required/>
+                            <input 
+                            required
+                            type={visibility ? "text" : "password"} 
+                            className="w-10/12 h-full py-3 px-4 rounded-lg bg-[#F5F5FC] focus:outline-none"/>
 
                             <IconButton onClick={togglePasswordVisibility}>
                                 {
@@ -97,28 +102,32 @@ export const SignUpForm = () => {
                         isSignedIn={true}
                         className={"google-login-btn"}
                     /> */}
-                    <div className='w-full 
+                    <button 
+                    disabled={true}
+                    className='w-full 
                     text-xs text-white
-                    cursor-pointer
+                    cursor-wait
                     py-3
                     px-6 flex flex-row gap-8 items-center
                     my-4 rounded-lg hover:shadow-lg transition-shadow duration-300 delay-200
-                    bg-[#1877F2]'>
-                        <FacebookIcon sx={{background : '#1877F2'}}/>
-                        <p className='text-center font-semibold'>Sign up with facebook</p>
-                    </div>
-                    <div className='w-full 
+                    bg-[#1877F2] disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none'>
+                        <FacebookIcon sx={{background : 'inherit'}}/>
+                        <p className='text-center font-semibold'>Login&nbsp;with&nbsp;facebook</p>
+                    </button>
+                    <button 
+                    disabled={true}
+                    className='w-full 
                     text-xs text-white
-                    cursor-pointer
+                    cursor-wait
                     py-3
                     px-6 flex flex-row gap-8 items-center
                     my-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 delay-200
                     border border-2-[#EFF0F6]
-                    bg-white
+                    bg-white disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none
                     text-black'>
                         <GoogleIcon sx={{background : 'inherit'}}/>
-                        <p className='text-center font-semibold'>Sign up with Google</p>
-                    </div>
+                        <p className='text-center font-semibold'>Login&nbsp;with&nbsp;Google</p>
+                    </button>
                     <div className='text-xs pt-6 text-center'><span>Already have an account? </span>
                         <Link to={{pathname : '/sign-in'}} className="text-[#05C731] font-semibold">Login</Link>
                     </div>

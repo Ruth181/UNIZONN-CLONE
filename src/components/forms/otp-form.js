@@ -23,7 +23,7 @@ export const EnterOTPForm = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        navigate('/upload-image');
+        navigate('/personal-info');
     }
     const handleOtpInputChange = ({target}) => {
         const { value } = target;

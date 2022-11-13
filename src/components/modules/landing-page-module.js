@@ -5,8 +5,10 @@ import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Connect } from "../shared/connect";
+import {useNavigate} from 'react-router-dom';
 
 const LandingPageModule = () => {
+    const navigate = useNavigate();
     return(
         <LandingPageLayout>
             <div className="w-full h-full flex  flex-col lg:flex-row lg:gap-64 xl:gap-[26rem] lg:py-24 mb-8">
@@ -16,12 +18,39 @@ const LandingPageModule = () => {
                     <p className="text-[#67676D] text-sm py-2">Join millions of students connecting on Unizonn</p>
 
                     <div className="mt-16 mb-8 flex flex-col">
-                        <div className="mb-4 cursor-pointer shadow p-3 flex flex-row gap-4 md:gap-8 items-center text-sm text-black bg-white border border-[#EFF0F6] rounded-xl">
+                        <div 
+                        onClick={() => navigate('/sign-up')}
+                        className="mb-4 cursor-pointer shadow p-3 flex flex-row gap-4 md:gap-8 items-center text-sm text-black bg-white border border-[#EFF0F6] rounded-xl">
                             <div><MailOutlineRoundedIcon/></div>
                             <p className="capitalize font-semibold text-center">Sign Up with Email</p>
                         </div>
-
-                        <div className="mb-4 cursor-pointer shadow p-3 flex flex-row gap-4 md:gap-8 items-center text-sm text-white bg-[#1877F2] rounded-xl">
+                        <button 
+                        disabled={true}
+                        className='w-full 
+                        text-xs text-white
+                        cursor-wait
+                        py-3
+                        px-6 flex flex-row gap-8 items-center
+                        my-4 rounded-lg hover:shadow-lg transition-shadow duration-300 delay-200
+                        bg-[#1877F2] disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none'>
+                            <FacebookIcon sx={{background : 'inherit'}}/>
+                            <p className='text-center font-semibold'>Login&nbsp;with&nbsp;facebook</p>
+                        </button>
+                        <button 
+                        disabled={true}
+                        className='w-full 
+                        text-xs text-white
+                        cursor-wait
+                        py-3
+                        px-6 flex flex-row gap-8 items-center
+                        my-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 delay-200
+                        border border-2-[#EFF0F6]
+                        bg-white disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none
+                        text-black'>
+                            <GoogleIcon sx={{background : 'inherit'}}/>
+                            <p className='text-center font-semibold'>Login&nbsp;with&nbsp;Google</p>
+                        </button>
+                        {/* <div className="mb-4 cursor-pointer shadow p-3 flex flex-row gap-4 md:gap-8 items-center text-sm text-white bg-[#1877F2] rounded-xl">
                             <div><FacebookIcon sx={{backgroundColor:"inherit"}}/></div>
                             <p className="capitalize font-semibold text-center">Facebook</p>
                         </div>
@@ -29,7 +58,7 @@ const LandingPageModule = () => {
                         <div className="mb-4 cursor-pointer shadow p-3 flex flex-row gap-4 md:gap-8 items-center text-sm text-black bg-white border border-[#EFF0F6] rounded-xl">
                             <div><GoogleIcon/></div>
                             <p className="capitalize font-semibold text-center">Sign Up with Google</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <p className="text-xs py-1">By clicking on Register, you agree to Unizonn's</p>

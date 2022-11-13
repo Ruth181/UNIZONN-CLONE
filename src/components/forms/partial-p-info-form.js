@@ -1,8 +1,10 @@
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import { IconButton } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const PartialPersonalInfoForm = () => {
+    const navigate = useNavigate();
     const [select, setSelect] = React.useState({
         countryDropdown : false,
         roleDropdown : false,
@@ -39,7 +41,10 @@ export const PartialPersonalInfoForm = () => {
                 <p className="text-[#67676D] py-2 text-sm font-md">Join millions of students connecting on <br/> unizonn</p>
             </div>
             <div className="mt-8">
-                <form>
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                    navigate('/upload-image');
+                }}>
                     {/* Group 1 */}
                     <div className="flex flex-col md:flex-row gap-4 items-center mb-2">
 

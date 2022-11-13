@@ -75,7 +75,7 @@ export const ProfileDisplay = () => {
         <div className="w-full rounded-2xl bg-white h-fit p-4">
             <div className="flex justify-end">
                 <button
-                    className="px-4 py-2 capitalize text-[#05C731] outline-none text-sm font-semibold border-2 duration-300 delay-200 border-[#05C731] rounded-xl hover:bg-[#05C731] hover:text-white">
+                    className="px-4 py-2 capitalize text-[#05C731] outline-none text-xs font-semibold border-2 duration-300 delay-200 border-[#05C731] rounded-xl hover:bg-[#05C731] hover:text-white">
                     update&nbsp;profile
                 </button>
             </div>
@@ -110,8 +110,8 @@ export const ProfileDisplay = () => {
 
             {/* Percentage of profile completion */}
             <div className="flex justify-center mt-6">
-                <div className="w-fit bg-[#FFF2F1] px-6 py-4 rounded-lg">
-                    <p className="text-black font-bold text-center text-sm">60%&nbsp;Profile&nbsp;Completion</p>
+                <div className="w-fit bg-[#FFF2F1] px-6 py-4 rounded-xl">
+                    <p className="text-black font-semibold text-center text-xs">60%&nbsp;Profile&nbsp;Completion</p>
                 </div>
             </div>
         </div>

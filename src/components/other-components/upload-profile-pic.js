@@ -2,10 +2,12 @@ import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import {Link} from 'react-router-dom';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const UploadProfilePictureComponent = () => {
 
+    const navigate = useNavigate();
     const [image, setImage] = React.useState(null);
     const [preview, setPreview] = React.useState("");
 
@@ -57,10 +59,12 @@ export const UploadProfilePictureComponent = () => {
                         <AddCircleRoundedIcon sx={{color : '#05C731', border : '1px dashed #F5F5FC', borderRadius : '100%'}}/>
                     </div>
                     {/* pluse icon here */}
-            </div>
+                </div>
 
 
-                <div className='capitalize
+                <div
+                onClick={() => navigate('/signIn-interests')} 
+                className='capitalize
                 w-full 
                 text-center 
                 bg-gradient-to-r from-[#06E037] to-[#04AD2B] 

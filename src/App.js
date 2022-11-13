@@ -24,6 +24,13 @@ import { EmbeddedArticleComponent } from './components/shared/articles-component
 import { ConnectFriends } from './components/article-components/connect-friends-component';
 import { ReadMoreProfileReactionsComponent } from './components/article-components/article-read-more/profile-reactions';
 import { ReadMoreArticle } from './components/article-components/article-read-more/article-read-more';
+import PostsModuleComponent from './components/modules/post-module/posts-module';
+import { IndividualPosts } from './components/modules/post-module/individual-posts';
+import { DraftsComponent } from './components/modules/drafts/drafts-component';
+import DraftModule from './components/modules/drafts/draft-layout';
+import { LeftComponentForDraft } from './components/modules/drafts/drafts';
+import { ReadMoreDraft } from './components/modules/drafts/read-more-draft';
+import { SavedArticlesComponent } from './components/saved-articles/saved-articles';
 
 
 function App() {
@@ -53,6 +60,21 @@ function App() {
           <Route path="/logged/articles/:article" element={<ArticlesModuleComponent 
           leftComponent={<ReadMoreProfileReactionsComponent/>}
           middleComponent={<ReadMoreArticle/>}/>}></Route>
+          <Route exact path="/posts" element={<PostsModuleComponent 
+          leftComponent={<ProfileDisplay/>}
+          middleComponent={<IndividualPosts posts={[0,1,2]}/>}
+          rightComponent={<ConnectFriends/>}/>}></Route>
+          <Route exact path="/drafts" element={<DraftModule 
+          leftComponent={<ProfileDisplay/>}
+          middleComponent={<DraftsComponent drafts={[0,1,2]}/>}
+          rightComponent={<ConnectFriends/>}/>}></Route>
+          <Route path="/drafts/:draft" element={<ArticlesModuleComponent 
+          leftComponent={<LeftComponentForDraft/>}
+          middleComponent={<ReadMoreDraft/>}/>}></Route>
+           <Route exact path="/saved-articles" element={<ArticlesModuleComponent 
+          leftComponent={<ProfileDisplay/>}
+          middleComponent={ <SavedArticlesComponent articles={[0,1,3,4]} layoutWidth={true}/>}
+          rightComponent={<ConnectFriends/>}/>}></Route>
         </Routes>
     </div>
   );

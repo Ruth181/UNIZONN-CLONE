@@ -4,12 +4,19 @@ import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import { useNavigate } from 'react-router-dom';
+import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded';
+import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 
-export const ListOfArticles = ({articles}) => {
+export const ListOfArticles = ({articles,saved = false}) => {
+
+    const navigate = useNavigate();
+
     return(
         <React.Fragment>
             {articles && articles.map((_, index) => 
-                <div className="cursor-pointer w-full bg-white my-4 rounded-xl h-fit p-6" key={index}>
+                <div className="cursor-pointer w-full bg-white my-4 rounded-xl h-fit p-6" key={index}
+                onClick={() => navigate('/logged/articles/'.concat(index))}>
                     <div className="flex flex-row gap-2 items-center">
                         <Avatar src={window.location.origin + '/Avatar.png'}/>
                         <p className="text-sm font-semibold">jane Doe<span className="text-[#93939A]"> . </span><span className="text-[#93939A] font-medium">5 Min Ago</span></p>
@@ -30,12 +37,26 @@ export const ListOfArticles = ({articles}) => {
                         
                     <div className="bg-[#EFF0F6] h-px w-full my-2"/>
 
-                    <div className="w-full flex justify-between items-center text-sm pt-0.5">
-                        <p><BookmarksOutlinedIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">988</span></p>
-                        <p><ShareIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">988</span></p>
-                        <p><FavoriteBorderIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">988</span></p>
-                        <p><BookmarkBorderIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">988</span></p>
-                    </div>
+                    <section className="w-full flex justify-between items-center text-xs font-semibold text-sm pt-0.5">
+                        <div className='flex flex-row items-center gap-1 cursor-pointer'>
+                            <MenuBookOutlinedIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">288</span>
+                        </div>
+                        <div className='flex flex-row items-center gap-1 cursor-pointer'>
+                            <ShareIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">988</span>
+                        </div>
+                        <div className='flex flex-row items-center gap-1 cursor-pointer'>
+                            <FavoriteBorderIcon sx={{fontSize : '18px'}}/> <span className="text-[#828282]">100</span>
+                        </div>
+                        <div className='flex flex-row items-center gap-1 cursor-pointer'>
+                        {!saved ?
+                            <BookmarksOutlinedIcon sx={{fontSize : '18px'}}/> 
+                            :
+                            <BookmarkRoundedIcon sx={{fontSize : '18px', color:'#610BEF'}}/> 
+
+                        }
+                            <span className="text-[#828282]">98</span>
+                        </div>
+                    </section>
                 </div>
             )}
         </React.Fragment>

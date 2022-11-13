@@ -95,28 +95,32 @@ export const LoginForm = () => {
                         isSignedIn={true}
                         className={"google-login-btn"}
                     /> */}
-                    <div className='w-full 
+                    <button 
+                    disabled={true}
+                    className='w-full 
                     text-xs text-white
-                    cursor-pointer
+                    cursor-wait
                     py-3
                     px-6 flex flex-row gap-8 items-center
                     my-4 rounded-lg hover:shadow-lg transition-shadow duration-300 delay-200
-                    bg-[#1877F2]'>
-                        <FacebookIcon sx={{background : '#1877F2'}}/>
-                        <p className='text-center font-semibold'>Login with facebook</p>
-                    </div>
-                    <div className='w-full 
+                    bg-[#1877F2] disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none'>
+                        <FacebookIcon sx={{background : 'inherit'}}/>
+                        <p className='text-center font-semibold'>Login&nbsp;with&nbsp;facebook</p>
+                    </button>
+                    <button 
+                    disabled={true}
+                    className='w-full 
                     text-xs text-white
-                    cursor-pointer
+                    cursor-wait
                     py-3
                     px-6 flex flex-row gap-8 items-center
                     my-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 delay-200
                     border border-2-[#EFF0F6]
-                    bg-white
+                    bg-white disabled:bg-[#D9DBE9] disabled:text[#4E4B66] disabled:shadow-none
                     text-black'>
                         <GoogleIcon sx={{background : 'inherit'}}/>
-                        <p className='text-center font-semibold'>Login with Google</p>
-                    </div>
+                        <p className='text-center font-semibold'>Login&nbsp;with&nbsp;Google</p>
+                    </button>
                     <div className='text-xs pt-6 text-center'><span>Don't have an account? </span>
                         <Link to={{pathname : '/sign-up'}} className="text-[#05C731] font-semibold">SignUp</Link>
                     </div>
