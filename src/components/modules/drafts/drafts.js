@@ -1,10 +1,10 @@
 import React from "react";
 import {Avatar} from '@mui/material';
-import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
-import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+// import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
+// import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+// import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
+// import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
+// import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 // import { unstable_HistoryRouter } from "react-router-dom";
 

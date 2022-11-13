@@ -11,7 +11,7 @@ const SuccessfulModule = () => {
                 <div className="w-fit sm:w-[30%] md:w-[30%] md:max-xl:w-[25%]">
                     <div className="w-full flex justify-center">
                         <div className="w-44 h-44">
-                            <img src={window.location.origin + "/success.png"} className="w-full h-full object-cover"/>
+                            <img src={window.location.origin + "/success.png"} className="w-full h-full object-cover" alt=""/>
                         </div>
                     </div>
 

@@ -63,7 +63,7 @@ export const IndividualPosts = ({posts}) => {
                     </section>
 
                     <section className="w-full rounded-xl">
-                        <img src={window.location.origin + "/post.png"} className="w-full h-auto"/>
+                        <img src={window.location.origin + "/post.png"} className="w-full h-auto" alt=""/>
                     </section>
 
                     <section className="flex justify-between items-center text-black font-bold text-xs py-4">

@@ -1,6 +1,6 @@
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import './auth.css';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 /**TOP BAR OR NAV BAR FOR AUTHENTICATION */
 

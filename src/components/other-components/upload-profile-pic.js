@@ -48,7 +48,7 @@ export const UploadProfilePictureComponent = () => {
                         rounded-full flex justify-center 
                         items-center border border-dashed
                         border-[#F5F5FC]">
-                            {preview ? <img src={preview} className="w-full h-full object-cover rounded-full"/> :<PersonRoundedIcon sx={{fontSize : "35px"}}/>}
+                            {preview ? <img src={preview} className="w-full h-full object-cover rounded-full" alt=''/> :<PersonRoundedIcon sx={{fontSize : "35px"}}/>}
                         </div>
                     </div>
                     <input type={"file"} accept="image/*" className="hidden" id="file" onChange={onChangeFile}/>

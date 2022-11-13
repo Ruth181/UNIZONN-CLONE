@@ -1,12 +1,12 @@
 import { Avatar, IconButton } from "@mui/material";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import React from 'react';
-import { EmbeddedArticleComponent } from "../../shared/articles-component";
-import { ListOfArticles } from "../../shared/list-of-articles";
-import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
-import ShareIcon from '@mui/icons-material/Share';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+// import { EmbeddedArticleComponent } from "../../shared/articles-component";
+// import { ListOfArticles } from "../../shared/list-of-articles";
+// import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
+// import ShareIcon from '@mui/icons-material/Share';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 export const ReadMoreDraft = () => {
     return(
@@ -30,7 +30,11 @@ export const ReadMoreDraft = () => {
                     </div>
 
                     <div className="w-full h-72 rounded-md my-8">
-                        <img src={window.location.origin + "/Rectangle519.png"} className="w-full h-full rounded-md object-cover"/>
+                        <img 
+                        src={window.location.origin + "/Rectangle519.png"} 
+                        className="w-full h-full rounded-md object-cover"
+                        alt=""
+                        />
                     </div>
 
                     <div className="text-[##101011] text-base leading-relaxed">
@@ -40,7 +44,10 @@ export const ReadMoreDraft = () => {
                     </div>
 
                     <div className="w-full h-96 rounded-md my-8">
-                        <img src={window.location.origin + "/Rectangle2323.png"} className="w-full h-full rounded-md object-cover"/>
+                        <img src={window.location.origin + "/Rectangle2323.png"} 
+                        className="w-full h-full rounded-md object-cover"
+                        alt=""
+                        />
                     </div>
 
                     <div className="text-[##101011] text-sm text-base leading-relaxed">

@@ -1,4 +1,4 @@
-import { AuthenticationBar } from "../top-bars/authentication-topbar";
+//import { AuthenticationBar } from "../top-bars/authentication-topbar";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import {Link, useSearchParams} from 'react-router-dom';
 import { IconButton } from "@mui/material";
@@ -8,13 +8,14 @@ import { ListOfArticles } from "../shared/list-of-articles";
 export const SavedArticlesComponent = ({articles, layoutWidth = false}) => {
 
     const [topics, setTopics] = React.useState(['All','Arts&science', 'Technology', 'Entertainment', 'Politics']);
-    const [searchParams] =useSearchParams();
+    //const [searchParams] =useSearchParams();
     const [path, setPath] = React.useState('');
+    const direction = window.location.href;
 
     React.useEffect(() => {
         const pathname = window.location.href.split('/').pop();
         setPath(pathname);
-    },[window.location.href]);
+    },[direction]);
 
 
     return (
@@ -53,7 +54,7 @@ export const SavedArticlesComponent = ({articles, layoutWidth = false}) => {
             {articles.length <= 0 &&
                 <div className="flex justify-center mt-24">
                     <div className="w-fit h-fit flex flex-col">
-                        <img src={window.location.origin + '/vector.png'} className="object-contain"/>
+                        <img src={window.location.origin + '/vector.png'} className="object-contain" alt=''/>
                         <p className="text-center text-black font-semibold text-sm py-2">No article to display here</p>
                         <p className="text-center text-[#4A4A4E] text-sm">Expand your connection to see more articles</p>
                     </div>

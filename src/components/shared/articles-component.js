@@ -53,7 +53,9 @@ export const EmbeddedArticleComponent = ({articles, layoutWidth = false}) => {
             {articles.length <= 0 &&
                 <div className="flex justify-center mt-24">
                     <div className="w-fit h-fit flex flex-col">
-                        <img src={window.location.origin + '/vector.png'} className="object-contain"/>
+                        <img src={window.location.origin + '/vector.png'} 
+                        className="object-contain"
+                        alt=""/>
                         <p className="text-center text-black font-semibold text-sm py-2">No article to display here</p>
                         <p className="text-center text-[#4A4A4E] text-sm">Expand your connection to see more articles</p>
                     </div>

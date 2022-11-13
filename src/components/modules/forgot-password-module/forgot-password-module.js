@@ -15,7 +15,7 @@ const ForgotPasswordModule = () => {
             <div className="my-8 w-11/12 md:w-3/5 lg:w-[40%] xl:w-[30%] h-fit bg-white rounded-2xl p-12">
                 <div className="flex justify-center">
                     <div className="w-40 h-40">
-                        <img src={window.location.origin + '/Saly-1.png'} className="w-full h-full object-cover"/>
+                        <img src={window.location.origin + '/Saly-1.png'} className="w-full h-full object-cover" alt=""/>
                     </div>
                 </div>
 

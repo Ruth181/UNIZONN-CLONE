@@ -1,9 +1,8 @@
 import React from 'react';
-import { Avatar, IconButton } from "@mui/material";
+import { Avatar } from "@mui/material";
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { useNavigate } from 'react-router-dom';
 import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
@@ -31,7 +30,9 @@ export const ListOfArticles = ({articles,saved = false}) => {
                         </div>
 
                         <div className="w-full md:w-2/5 border border-[#E5E5E5]">
-                            <img src={window.location.origin + "/Rectangle2323.png"} className="w-full h-full object-cover"/>
+                            <img src={window.location.origin + "/Rectangle2323.png"} 
+                            className="w-full h-full object-cover"
+                            alt=""/>
                         </div>
                     </div>
                         
