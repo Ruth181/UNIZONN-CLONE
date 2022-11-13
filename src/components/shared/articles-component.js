@@ -1,4 +1,4 @@
-import { AuthenticationBar } from "../top-bars/authentication-topbar";
+// import { AuthenticationBar } from "../top-bars/authentication-topbar";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import {Link, useSearchParams} from 'react-router-dom';
 import { IconButton } from "@mui/material";
@@ -8,14 +8,15 @@ import { ListOfArticles } from "./list-of-articles";
 export const EmbeddedArticleComponent = ({articles, layoutWidth = false}) => {
 
     const [topics, setTopics] = React.useState(['All','Arts&science', 'Technology', 'Entertainment', 'Politics']);
-    const [searchParams] =useSearchParams();
+    // const [searchParams] =useSearchParams();
     const [path, setPath] = React.useState('');
 
     const direction = window.location.href;
+    
     React.useEffect(() => {
         const pathname = window.location.href.split('/').pop();
         setPath(pathname);
-        
+
     },[direction]);
 
 

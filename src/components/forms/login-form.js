@@ -2,7 +2,7 @@ import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 import { IconButton } from '@mui/material';
 import React from 'react';
-import GoogleLogin from 'react-google-login';
+// import GoogleLogin from 'react-google-login';
 import { Link } from 'react-router-dom';
 import '../../App.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -16,13 +16,13 @@ export const LoginForm = () => {
         setVisibility(!visibility);
     }
 
-    const onSuccess = (res) =>{
-        console.log("Login Success! Current User", res);
-    }
+    // const onSuccess = (res) =>{
+    //     console.log("Login Success! Current User", res);
+    // }
 
-    const onFailure = (res) =>{
-        console.log("Login Failed! Current User", res);
-    }
+    // const onFailure = (res) =>{
+    //     console.log("Login Failed! Current User", res);
+    // }
 
     return(
 

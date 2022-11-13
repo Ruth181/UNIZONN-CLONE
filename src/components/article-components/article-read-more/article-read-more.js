@@ -1,7 +1,7 @@
-import { Avatar, IconButton } from "@mui/material";
+import { Avatar } from "@mui/material";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import React from 'react';
-import { EmbeddedArticleComponent } from "../../shared/articles-component";
+// import { EmbeddedArticleComponent } from "../../shared/articles-component";
 import { ListOfArticles } from "../../shared/list-of-articles";
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import ShareIcon from '@mui/icons-material/Share';
