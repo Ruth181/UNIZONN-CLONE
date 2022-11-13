@@ -12,10 +12,12 @@ import AddReactionOutlinedIcon from '@mui/icons-material/AddReactionOutlined';
 import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import {useState} from 'react';
+import { useLocation } from "react-router-dom";
 
 export const ArticleTopBar = () => {
     const [backdrop, setBackDrop] = useState(false);
     const [search, setSearch]  = useState(false);
+    const location = useLocation();
 
     return(
         <div className="sticky top-0 w-full shadow bg-white flex justify-center items-center z-10">
@@ -34,7 +36,7 @@ export const ArticleTopBar = () => {
                     <div className="hidden lg:flex bg-[#05C731] mr-4 rounded-md cursor-pointer text-white capitalize text-white text-xs px-4 py-2.5"
                     onClick={() => setBackDrop(!backdrop)}>
                         <LaunchRoundedIcon sx={{fontSize:'15px', color:'#fff'}}/>
-                        <span>&emsp;create&nbsp;new&nbsp;{window.location.href.includes('article') ? 'article' : 'post'}</span>
+                        <span>&emsp;create&nbsp;new&nbsp;{location.pathname.includes('article') ? 'article' : 'post'}</span>
                     </div>
 
                     <IconButton>

@@ -12,7 +12,7 @@ import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import React from 'react';
 
 const links = [
@@ -68,7 +68,8 @@ const links = [
     },
 ];
 const ArticlesModuleComponent = ({leftComponent, middleComponent, rightComponent}) => {
-    const [path, setPath] = React.useState(window.location.href);
+    const location = useLocation();
+    const [path, setPath] = React.useState(location.pathname);
 
     return(
         <ArticleLayout>

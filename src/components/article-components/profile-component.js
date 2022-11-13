@@ -11,7 +11,8 @@ import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 // import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 
 const links = [
     {
@@ -24,16 +25,16 @@ const links = [
         icon : <WysiwygOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
         link : '/posts'
     },
-    {
-        title : 'catchup',
-        icon : <PlaceOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
-        link : '/catchup'
-    },
-    {
-        title : 'messages',
-        icon : <ForumOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
-        link : '/message'
-    },
+    // {
+    //     title : 'catchup',
+    //     icon : <PlaceOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
+    //     link : '/catchup'
+    // },
+    // {
+    //     title : 'messages',
+    //     icon : <ForumOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
+    //     link : '/message'
+    // },
     {
         title : 'saved articles',
         icon : <TurnedInNotOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
@@ -44,21 +45,21 @@ const links = [
         icon : <ModeOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
         link : '/drafts',
     },
-    {
-        title : 'ask unizonn',
-        icon : <HelpOutlineOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
-        link : '/help',
-    },
-    {
-        title : 'Invite friends',
-        icon : <GroupsOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
-        link : '/invite',
-    },
-    {
-        title : 'profile',
-        icon : <PersonOutlineOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
-        link : '/profile'
-    },
+    // {
+    //     title : 'ask unizonn',
+    //     icon : <HelpOutlineOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
+    //     link : '/help',
+    // },
+    // {
+    //     title : 'Invite friends',
+    //     icon : <GroupsOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
+    //     link : '/invite',
+    // },
+    // {
+    //     title : 'profile',
+    //     icon : <PersonOutlineOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
+    //     link : '/profile'
+    // },
     {
         title : 'sign out',
         icon : <LogoutOutlinedIcon sx={{color : '#67676D', fontSize : '15px'}}/>,
@@ -68,7 +69,8 @@ const links = [
 
 export const ProfileDisplay = () => {
 
-    const [path, setPath] = React.useState(window.location.href);
+    const location = useLocation();
+    const [path, setPath] = React.useState(location.pathname);
 
     return(
         <React.Fragment>
