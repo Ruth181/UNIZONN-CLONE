@@ -11,10 +11,12 @@ export const EmbeddedArticleComponent = ({articles, layoutWidth = false}) => {
     const [searchParams] =useSearchParams();
     const [path, setPath] = React.useState('');
 
+    const direction = window.location.href;
     React.useEffect(() => {
         const pathname = window.location.href.split('/').pop();
         setPath(pathname);
-    },[window.location.href]);
+        
+    },[direction]);
 
 
     return (

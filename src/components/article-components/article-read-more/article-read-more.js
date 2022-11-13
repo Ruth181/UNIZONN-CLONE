@@ -30,7 +30,10 @@ export const ReadMoreArticle = () => {
                     </div>
 
                     <div className="w-full h-72 rounded-md my-8">
-                        <img src={window.location.origin + "/Rectangle519.png"} className="w-full h-full rounded-md object-cover"/>
+                        <img 
+                        src={window.location.origin + "/Rectangle519.png"}
+                        className="w-full h-full rounded-md object-cover"
+                        alt=""/>
                     </div>
 
                     <div className="text-[##101011] text-base leading-relaxed">
@@ -40,7 +43,10 @@ export const ReadMoreArticle = () => {
                     </div>
 
                     <div className="w-full h-96 rounded-md my-8">
-                        <img src={window.location.origin + "/Rectangle2323.png"} className="w-full h-full rounded-md object-cover"/>
+                        <img 
+                        src={window.location.origin + "/Rectangle2323.png"} 
+                        className="w-full h-full rounded-md object-cover"
+                        alt=""/>
                     </div>
 
                     <div className="text-[##101011] text-sm text-base leading-relaxed">
